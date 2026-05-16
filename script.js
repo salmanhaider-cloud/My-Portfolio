@@ -1,216 +1,48 @@
-console.log("Portfolio Loaded");
+console.log("Cloud Engineer Portfolio Loaded Successfully");
 
+// Scroll Animation
+const sections = document.querySelectorAll('.fade-section');
 
-/* Typing */
+window.addEventListener('scroll', () => {
 
-const typing=document.querySelector(".typing");
+  sections.forEach(section => {
 
-const words=[
+    const sectionTop = section.getBoundingClientRect().top;
 
-"Cloud Engineer",
-"AWS Enthusiast",
-"Docker Developer",
-"Linux Explorer"
+    if(sectionTop < window.innerHeight - 100){
+      section.classList.add('show');
+    }
 
-];
-
-let word=0;
-let char=0;
-let deleting=false;
-
-
-function type(){
-
-
-let current=words[word];
-
-if(!deleting){
-
-typing.innerHTML=
-current.substring(
-0,
-char++
-);
-
-if(char>
-
-current.length){
-
-deleting=true;
-
-setTimeout(type,1000);
-
-return;
-
-}
-
-}
-
-else{
-
-typing.innerHTML=
-current.substring(
-0,
-char--
-);
-
-if(char==0){
-
-deleting=false;
-
-word++;
-
-if(word==words.length){
-
-word=0;
-
-}
-
-}
-
-}
-
-setTimeout(
-
-type,
-deleting?50:100
-
-);
-
-}
-
-type();
-
-
-
-/* Scroll reveal */
-
-const observer=
-new IntersectionObserver(
-
-entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add(
-"show"
-);
-
-}
+  });
 
 });
 
-}
+// Active Navbar Highlight
+const navLinks = document.querySelectorAll('.nav-right a');
+const allSections = document.querySelectorAll('section');
 
-);
+window.addEventListener('scroll', () => {
 
+  let current = '';
 
-document
-.querySelectorAll(".fade-section")
-.forEach(section=>{
+  allSections.forEach(section => {
 
-observer.observe(section);
+    const sectionTop = section.offsetTop;
+
+    if(pageYOffset >= sectionTop - 200){
+      current = section.getAttribute('id');
+    }
+
+  });
+
+  navLinks.forEach(link => {
+
+    link.classList.remove('active');
+
+    if(link.getAttribute('href') === '#' + current){
+      link.classList.add('active');
+    }
+
+  });
 
 });
-
-
-/* Progress bar */
-
-window.addEventListener(
-"scroll",
-
-()=>{
-
-const winScroll=
-
-document.documentElement.scrollTop;
-
-const height=
-
-document.documentElement.scrollHeight-
-
-document.documentElement.clientHeight;
-
-
-const scrolled=
-(winScroll/height)*100;
-
-
-document.getElementById(
-"progress-bar"
-).style.width=
-
-scrolled+"%";
-
-}
-
-);
-
-
-/* Cursor */
-
-const cursor=
-document.querySelector(".cursor");
-
-
-document.addEventListener(
-
-"mousemove",
-
-e=>{
-
-cursor.style.left=
-e.clientX+"px";
-
-cursor.style.top=
-e.clientY+"px";
-
-
-let particle=
-document.createElement(
-"div"
-);
-
-particle.style.position=
-"fixed";
-
-particle.style.left=
-e.clientX+"px";
-
-particle.style.top=
-e.clientY+"px";
-
-particle.style.width=
-"6px";
-
-particle.style.height=
-"6px";
-
-particle.style.borderRadius=
-"50%";
-
-particle.style.background=
-"#67e8f9";
-
-particle.style.pointerEvents=
-"none";
-
-particle.style.opacity=
-"1";
-
-document.body.appendChild(
-particle
-);
-
-
-setTimeout(()=>{
-
-particle.remove();
-
-},500);
-
-}
-
-);
