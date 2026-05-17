@@ -1,357 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Salman Haider | Cloud Engineer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <!-- Scroll Progress -->
 <div id="scroll-progress"></div>
 
-<!-- Canvas Particles -->
+<!-- Particle Canvas -->
 <canvas id="particles-canvas"></canvas>
 
-<!-- Cursor Trail -->
+<!-- Custom Cursor -->
 <div id="cursor-dot"></div>
 <div id="cursor-ring"></div>
 
 <!-- Skeleton Loader -->
 <div id="skeleton-loader">
-  <div class="sk-navbar">
+  <div class="sk-bar">
     <div class="sk-block sk-logo"></div>
-    <div class="sk-nav-links">
-      <div class="sk-block sk-link"></div>
-      <div class="sk-block sk-link"></div>
-      <div class="sk-block sk-link"></div>
-      <div class="sk-block sk-link"></div>
+    <div class="sk-links">
+      <div class="sk-block sk-lnk"></div>
+      <div class="sk-block sk-lnk"></div>
+      <div class="sk-block sk-lnk"></div>
+      <div class="sk-block sk-lnk"></div>
     </div>
   </div>
   <div class="sk-hero">
-    <div class="sk-block sk-hero-sub"></div>
-    <div class="sk-block sk-hero-title"></div>
-    <div class="sk-block sk-hero-para"></div>
-    <div class="sk-block sk-hero-para short"></div>
+    <div class="sk-block sk-hs"></div>
+    <div class="sk-block sk-ht"></div>
+    <div class="sk-block sk-hp"></div>
+    <div class="sk-block sk-hp short"></div>
   </div>
 </div>
 
-<!-- Splash -->
+<!-- SPLASH -->
 <div id="splash">
-  <div class="splash-inner">
-    <div class="splash-icon">☁️</div>
-    <h1>Salman Haider</h1>
-    <div class="splash-bar"><div class="splash-fill"></div></div>
-    <p>Initializing Cloud Portfolio...</p>
+  <div class="splash-wrap">
+    <div class="sp-rings">
+      <div class="sp-ring r1"></div>
+      <div class="sp-ring r2"></div>
+      <div class="sp-ring r3"></div>
+      <div class="sp-ring r4"></div>
+    </div>
+    <div class="sp-center">
+      <div class="sp-cloud">☁️</div>
+      <h1 class="sp-name">Salman Haider</h1>
+      <div class="sp-role">Cloud Engineer</div>
+      <div class="sp-bar"><div class="sp-fill"></div></div>
+      <p class="sp-tag">// booting up cloud portfolio...</p>
+    </div>
   </div>
 </div>
 
 <!-- NAVBAR -->
 <nav class="navbar" id="navbar">
-  <div class="nav-brand">
-    <span class="brand-icon">☁</span>
-    <span class="brand-text">Salman<span class="brand-accent">.</span>dev</span>
-  </div>
-
-  <div class="hamburger" id="hamburger" role="button" aria-label="Toggle menu">
+  <a href="#home" class="nav-brand">
+    <span class="nb-cloud">☁</span>
+    <span class="nb-text">Salman<span class="nb-dot">.</span>dev</span>
+  </a>
+  <div class="hamburger" id="hamburger" role="button" aria-label="Menu">
     <span></span><span></span><span></span>
   </div>
-
-  <div class="nav-right" id="nav-right">
-    <a href="#about"    class="nav-link">About</a>
-    <a href="#skills"   class="nav-link">Skills</a>
-    <a href="#projects" class="nav-link">Projects</a>
-    <a href="#timeline" class="nav-link">Journey</a>
-    <a href="#contact"  class="nav-link">Contact</a>
-    <a href="Salman Haider CV.pdf" download class="nav-cta">Download CV ↓</a>
+  <div class="nav-links" id="nav-links">
+    <a href="#about"    class="nl">About</a>
+    <a href="#skills"   class="nl">Skills</a>
+    <a href="#projects" class="nl">Projects</a>
+    <a href="#certs"    class="nl">Certs</a>
+    <a href="#timeline" class="nl">Journey</a>
+    <a href="#contact"  class="nl">Contact</a>
+    <a href="Salman Haider CV.pdf" download class="nl-cta">Download CV ↓</a>
   </div>
 </nav>
-<div class="mobile-overlay" id="mobile-overlay"></div>
+<div class="mob-overlay" id="mob-overlay"></div>
 
-<!-- HERO -->
+<!-- ══════════════════════════════════════ -->
+<!--  HERO — BG: Blue server cables (wide) -->
+<!-- ══════════════════════════════════════ -->
 <header class="hero" id="home">
-  <div class="hero-content fade-section">
-    <div class="hero-badge">
-      <span class="badge-dot"></span> Open to Work
+  <div class="hero-content fade-in">
+    <div class="avail-badge">
+      <span class="av-dot"></span> Available for Cloud Roles
     </div>
-    <p class="hero-sub">Hello, I'm</p>
-    <h1 class="hero-name">Salman<br><span>Haider</span></h1>
-    <div class="hero-role">
-      <span class="role-prefix">&lt;</span>
-      <span id="typing-text"></span>
-      <span class="role-suffix">/&gt;</span>
+    <p class="hi-line">Hello World, I'm</p>
+    <h1 class="hero-name">
+      <span class="hn-w">Salman</span>
+      <span class="hn-c">Haider</span>
+    </h1>
+    <div class="hero-typed">
+      <span class="tb">&lt;</span>
+      <span id="typed"></span>
+      <span class="tb"> /&gt;</span>
     </div>
-    <p class="hero-desc">Passionate about cloud infrastructure, scalable systems & making the internet run faster ☁️</p>
-    <div class="hero-btns">
-      <a href="#projects" class="btn-primary">View Projects</a>
-      <a href="https://www.linkedin.com/in/salmanhaider-cloud/" target="_blank" class="btn-outline">LinkedIn ↗</a>
+    <p class="hero-sub">Architecting cloud infrastructure · Taming Linux servers<br>Shipping containers across the digital sky ☁️</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-prim">View My Work →</a>
+      <a href="https://www.linkedin.com/in/salmanhaider-cloud/" target="_blank" class="btn-out">LinkedIn ↗</a>
+    </div>
+    <div class="scroll-cue">
+      <div class="sc-mouse"><div class="sc-wheel"></div></div>
+      <span>scroll to explore</span>
     </div>
   </div>
-  <div class="hero-visual fade-section">
-    <div class="orbit-wrapper">
-      <div class="orbit-center">☁️</div>
-      <div class="orbit orbit-1">
-        <div class="orbit-icon" style="--i:0">⚡</div>
+
+  <div class="hero-orbit fade-in">
+    <div class="orb-wrap">
+      <div class="orb-glow"></div>
+      <div class="orb-core">
+        <span class="orb-emoji">☁️</span>
+        <span class="orb-lbl">Cloud</span>
       </div>
-      <div class="orbit orbit-2">
-        <div class="orbit-icon" style="--i:0">🐳</div>
-        <div class="orbit-icon" style="--i:1">🔧</div>
+      <div class="ring ring1">
+        <div class="rn"><span>⚡</span><small>AWS</small></div>
       </div>
-      <div class="orbit orbit-3">
-        <div class="orbit-icon" style="--i:0">🐧</div>
-        <div class="orbit-icon" style="--i:1">🌐</div>
-        <div class="orbit-icon" style="--i:2">🔐</div>
+      <div class="ring ring2">
+        <div class="rn"><span>🐳</span><small>Docker</small></div>
+        <div class="rn"><span>🔧</span><small>Shell</small></div>
+      </div>
+      <div class="ring ring3">
+        <div class="rn"><span>🐧</span><small>Linux</small></div>
+        <div class="rn"><span>🌐</span><small>Net</small></div>
+        <div class="rn"><span>🔐</span><small>Sec</small></div>
       </div>
     </div>
   </div>
 </header>
 
 <!-- STATS -->
-<section class="stats-section fade-section">
-  <div class="stats-grid">
-    <div class="stat-card">
-      <div class="stat-num" data-target="4">0</div>
-      <div class="stat-label">Cloud Projects</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num" data-target="4">0</div>
-      <div class="stat-label">Certifications</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num" data-target="9">0</div>
-      <div class="stat-label">Skills Mastered</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num" data-target="100">0</div>
-      <div class="stat-label">% Dedication</div>
-    </div>
+<section class="stats-sec fade-in">
+  <div class="stats-wrap">
+    <div class="stat-c"><div class="st-ico">🚀</div><div class="st-n" data-t="4" data-s="+">0</div><div class="st-l">Cloud Projects</div></div>
+    <div class="stat-c"><div class="st-ico">🏆</div><div class="st-n" data-t="4" data-s="+">0</div><div class="st-l">Certifications</div></div>
+    <div class="stat-c"><div class="st-ico">⚙️</div><div class="st-n" data-t="9" data-s="+">0</div><div class="st-l">Tech Skills</div></div>
+    <div class="stat-c"><div class="st-ico">💯</div><div class="st-n" data-t="100" data-s="%">0</div><div class="st-l">Dedication</div></div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about fade-section" id="about">
-  <div class="section-label">// about me</div>
-  <h2>Who Am I?</h2>
-  <div class="about-grid">
-    <div class="card about-card">
-      <p>Passionate aspiring Cloud Engineer with strong interest in cloud infrastructure, networking, virtualization and scalable cloud technologies. Skilled in AWS, Azure, Linux, Docker, GitHub and cloud deployment.</p>
-      <p style="margin-top:16px;">I enjoy building real-world cloud projects and continuously improving my technical expertise to become a professional Cloud Engineer capable of handling enterprise cloud environments.</p>
-    </div>
-    <div class="about-highlights">
-      <div class="highlight-item"><span class="hi">☁️</span><div><strong>Cloud First</strong><p>Everything I build lives in the cloud</p></div></div>
-      <div class="highlight-item"><span class="hi">🚀</span><div><strong>Always Learning</strong><p>Chasing certs & new tech daily</p></div></div>
-      <div class="highlight-item"><span class="hi">🔧</span><div><strong>Problem Solver</strong><p>Infrastructure that just works</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="skills fade-section" id="skills">
-  <div class="section-label">// skills</div>
-  <h2>Tech Stack</h2>
-  <div class="skills-bars">
-    <div class="skill-bar-item">
-      <div class="skill-bar-header"><span>☁️ AWS</span><span class="skill-pct">75%</span></div>
-      <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="75"></div></div>
-    </div>
-    <div class="skill-bar-item">
-      <div class="skill-bar-header"><span>☁️ Azure</span><span class="skill-pct">70%</span></div>
-      <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="70"></div></div>
-    </div>
-    <div class="skill-bar-item">
-      <div class="skill-bar-header"><span>🐧 Linux</span><span class="skill-pct">80%</span></div>
-      <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80"></div></div>
-    </div>
-    <div class="skill-bar-item">
-      <div class="skill-bar-header"><span>🐳 Docker</span><span class="skill-pct">72%</span></div>
-      <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="72"></div></div>
-    </div>
-    <div class="skill-bar-item">
-      <div class="skill-bar-header"><span>🌐 Networking</span><span class="skill-pct">78%</span></div>
-      <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="78"></div></div>
-    </div>
-    <div class="skill-bar-item">
-      <div class="skill-bar-header"><span>🔧 Shell Scripting</span><span class="skill-pct">65%</span></div>
-      <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="65"></div></div>
-    </div>
-    <div class="skill-bar-item">
-      <div class="skill-bar-header"><span>🔐 Cloud Security</span><span class="skill-pct">68%</span></div>
-      <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="68"></div></div>
-    </div>
-    <div class="skill-bar-item">
-      <div class="skill-bar-header"><span>🖥️ Virtualization</span><span class="skill-pct">73%</span></div>
-      <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="73"></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section class="projects fade-section" id="projects">
-  <div class="section-label">// projects</div>
-  <h2>What I've Built</h2>
-  <div class="projects-grid">
-    <div class="project-card">
-      <div class="project-icon">☁️</div>
-      <h3>AWS EC2 Apache Deployment</h3>
-      <p>Deployed EC2 instance and configured Apache web server on AWS cloud with full security group setup.</p>
-      <div class="project-tags"><span>AWS</span><span>EC2</span><span>Apache</span></div>
-    </div>
-    <div class="project-card">
-      <div class="project-icon">🖥️</div>
-      <h3>Azure VM Deployment</h3>
-      <p>Managed Azure virtual machines using PowerShell and cloud networking with VNet configuration.</p>
-      <div class="project-tags"><span>Azure</span><span>PowerShell</span><span>VNet</span></div>
-    </div>
-    <div class="project-card">
-      <div class="project-icon">🐳</div>
-      <h3>Docker Container Project</h3>
-      <p>Containerized applications using Docker for scalable deployments with custom Dockerfiles.</p>
-      <div class="project-tags"><span>Docker</span><span>Containers</span><span>DevOps</span></div>
-    </div>
-    <div class="project-card">
-      <div class="project-icon">🌐</div>
-      <h3>GitHub Portfolio Hosting</h3>
-      <p>Hosted live cloud portfolio website using GitHub Pages with custom domain and CI/CD.</p>
-      <div class="project-tags"><span>GitHub</span><span>CI/CD</span><span>Web</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section class="certifications fade-section">
-  <div class="section-label">// certifications</div>
-  <h2>Credentials</h2>
-  <div class="certs-grid">
-    <div class="cert-card">
-      <div class="cert-icon">🏆</div>
-      <div class="cert-info">
-        <h4>AWS Cloud Practitioner</h4>
-        <p>Preparing — In Progress</p>
+<!-- ══════════════════════════════════════════ -->
+<!--  ABOUT — BG: Hallway server room (dark)   -->
+<!-- ══════════════════════════════════════════ -->
+<section class="about sec-bg-2 fade-in" id="about">
+  <div class="sec-inner">
+    <div class="sl">// 01. about_me</div>
+    <h2 class="st">Who Am I?</h2>
+    <div class="about-grid">
+      <div class="terminal-card">
+        <div class="term-top">
+          <div class="tdots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+          <span class="ttitle">salman@cloud:~$</span>
+        </div>
+        <div class="term-body">
+          <div class="tl"><span class="tc">~$</span><span class="tk">whoami</span></div>
+          <div class="to">Passionate Cloud Engineer — AWS · Azure · Linux · Docker · Networking</div>
+          <div class="tl" style="margin-top:14px"><span class="tc">~$</span><span class="tk">cat mission.txt</span></div>
+          <div class="to">Building real-world cloud infrastructure to solve enterprise problems. Every deployment is one step closer to becoming a world-class Cloud Engineer.</div>
+          <div class="tl" style="margin-top:14px"><span class="tc">~$</span><span class="tk">echo $STATUS</span></div>
+          <div class="to green-txt">Open to Work · Pakistan 🇵🇰</div>
+          <div class="tcursor">█</div>
+        </div>
       </div>
-      <div class="cert-status preparing">In Progress</div>
-    </div>
-    <div class="cert-card">
-      <div class="cert-icon">🏅</div>
-      <div class="cert-info">
-        <h4>Azure Fundamentals (AZ-900)</h4>
-        <p>Learning Path Active</p>
-      </div>
-      <div class="cert-status learning">Learning</div>
-    </div>
-    <div class="cert-card">
-      <div class="cert-icon">☁️</div>
-      <div class="cert-info">
-        <h4>Cloud Infrastructure Practice</h4>
-        <p>Hands-on Lab Certified</p>
-      </div>
-      <div class="cert-status done">Completed</div>
-    </div>
-    <div class="cert-card">
-      <div class="cert-icon">🌐</div>
-      <div class="cert-info">
-        <h4>CCNA v7 Switching &amp; Routing</h4>
-        <p>Cisco Networking Academy</p>
-      </div>
-      <div class="cert-status done">Completed</div>
-    </div>
-  </div>
-</section>
-
-<!-- TIMELINE -->
-<section class="timeline-section fade-section" id="timeline">
-  <div class="section-label">// journey</div>
-  <h2>My Journey</h2>
-  <div class="timeline">
-    <div class="timeline-item left">
-      <div class="timeline-dot"></div>
-      <div class="timeline-card">
-        <div class="tl-year">2022</div>
-        <h4>Started Networking</h4>
-        <p>Began learning CCNA — Routing, Switching & Network fundamentals with Cisco Academy.</p>
-      </div>
-    </div>
-    <div class="timeline-item right">
-      <div class="timeline-dot"></div>
-      <div class="timeline-card">
-        <div class="tl-year">2023</div>
-        <h4>Linux & Virtualization</h4>
-        <p>Deep-dived into Linux administration, shell scripting and virtualization concepts.</p>
-      </div>
-    </div>
-    <div class="timeline-item left">
-      <div class="timeline-dot"></div>
-      <div class="timeline-card">
-        <div class="tl-year">2024</div>
-        <h4>Cloud Journey Begins</h4>
-        <p>Started AWS & Azure training. Deployed first EC2 instance and Docker containers.</p>
-      </div>
-    </div>
-    <div class="timeline-item right">
-      <div class="timeline-dot"></div>
-      <div class="timeline-card">
-        <div class="tl-year">2025–26</div>
-        <h4>Building & Certifying</h4>
-        <p>Building real-world cloud projects & pursuing AWS Cloud Practitioner certification.</p>
+      <div class="hl-stack">
+        <div class="hl-item"><div class="hi-ico">☁️</div><div><strong>Cloud-First Mindset</strong><p>Everything I build is scalable, reliable, and cloud-native.</p></div></div>
+        <div class="hl-item"><div class="hi-ico">🚀</div><div><strong>Always Leveling Up</strong><p>Chasing certs, new tools & best practices every single day.</p></div></div>
+        <div class="hl-item"><div class="hi-ico">🔧</div><div><strong>Infrastructure Nerd</strong><p>I love when systems just work — and I make sure they do.</p></div></div>
+        <div class="hl-item"><div class="hi-ico">🌐</div><div><strong>Network Enthusiast</strong><p>Deep CCNA knowledge in routing, switching & TCP/IP.</p></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact fade-section" id="contact">
-  <div class="section-label">// contact</div>
-  <h2>Let's Connect</h2>
-  <div class="contact-wrapper">
-    <div class="contact-info">
-      <p class="contact-intro">Open to cloud engineering roles, freelance projects, and collaborations. Let's build something awesome together!</p>
-      <a href="https://wa.me/923000357825" target="_blank" class="contact-link wa">
-        <span class="cl-icon">💬</span>
-        <div><strong>WhatsApp</strong><small>+92 300 0357825</small></div>
-        <span class="cl-arrow">↗</span>
-      </a>
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=salmanhaider087@gmail.com" target="_blank" class="contact-link email">
-        <span class="cl-icon">📧</span>
-        <div><strong>Email</strong><small>salmanhaider087@gmail.com</small></div>
-        <span class="cl-arrow">↗</span>
-      </a>
-      <a href="https://www.linkedin.com/in/salmanhaider-cloud/" target="_blank" class="contact-link li">
-        <span class="cl-icon">🔗</span>
-        <div><strong>LinkedIn</strong><small>salmanhaider-cloud</small></div>
-        <span class="cl-arrow">↗</span>
-      </a>
+<!-- ══════════════════════════════════════════ -->
+<!--  SKILLS                                    -->
+<!-- ══════════════════════════════════════════ -->
+<section class="skills fade-in" id="skills">
+  <div class="sec-inner">
+    <div class="sl">// 02. skills</div>
+    <h2 class="st">Tech Arsenal</h2>
+    <div class="skills-grid">
+      <div class="skill-bars">
+        <div class="sb"><div class="sbh"><span>🐧 Linux Administration</span><span class="sp">80%</span></div><div class="sbt"><div class="sbf" data-w="80"></div></div></div>
+        <div class="sb"><div class="sbh"><span>☁️ AWS</span><span class="sp">75%</span></div><div class="sbt"><div class="sbf" data-w="75"></div></div></div>
+        <div class="sb"><div class="sbh"><span>🌐 Networking (CCNA)</span><span class="sp">78%</span></div><div class="sbt"><div class="sbf" data-w="78"></div></div></div>
+        <div class="sb"><div class="sbh"><span>☁️ Azure</span><span class="sp">72%</span></div><div class="sbt"><div class="sbf" data-w="72"></div></div></div>
+        <div class="sb"><div class="sbh"><span>🐳 Docker</span><span class="sp">72%</span></div><div class="sbt"><div class="sbf" data-w="72"></div></div></div>
+        <div class="sb"><div class="sbh"><span>🔧 Shell Scripting</span><span class="sp">65%</span></div><div class="sbt"><div class="sbf" data-w="65"></div></div></div>
+        <div class="sb"><div class="sbh"><span>🔐 Cloud Security</span><span class="sp">68%</span></div><div class="sbt"><div class="sbf" data-w="68"></div></div></div>
+        <div class="sb"><div class="sbh"><span>🖥️ Virtualization</span><span class="sp">73%</span></div><div class="sbt"><div class="sbf" data-w="73"></div></div></div>
+      </div>
+      <div class="tag-box">
+        <h4>// tools &amp; tech</h4>
+        <div class="tags">
+          <span>AWS EC2</span><span>AWS S3</span><span>AWS IAM</span>
+          <span>Azure VM</span><span>Azure VNet</span><span>Azure NSG</span>
+          <span>Docker</span><span>Compose</span>
+          <span>Linux</span><span>Bash</span><span>PowerShell</span>
+          <span>GitHub</span><span>GitHub Pages</span><span>Apache</span>
+          <span>TCP/IP</span><span>Subnetting</span>
+          <span>Firewalls</span><span>VPN</span><span>Security Groups</span>
+        </div>
+      </div>
     </div>
-    <div class="hire-form card">
-      <h3>Hire Me</h3>
-      <p>Companies can reach out with project requirements directly below.</p>
-      <input type="text"  placeholder="Company Name">
-      <input type="email" placeholder="Company Email">
-      <textarea placeholder="Project Details / Requirements"></textarea>
-      <button>Send Hire Request 🚀</button>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!--  PROJECTS — BG: Cable network close-up    -->
+<!-- ══════════════════════════════════════════ -->
+<section class="projects sec-bg-3 fade-in" id="projects">
+  <div class="sec-inner">
+    <div class="sl">// 03. projects</div>
+    <h2 class="st">What I've Built</h2>
+    <div class="proj-grid">
+      <div class="pc">
+        <div class="pc-top"><span class="pe">☁️</span><span class="pb aws">AWS</span></div>
+        <h3>AWS EC2 Apache Deployment</h3>
+        <p>Deployed EC2 instance on AWS, configured Apache web server, set up security groups, and managed inbound/outbound traffic for a live production server.</p>
+        <div class="ptags"><span>EC2</span><span>Apache</span><span>Linux</span><span>SG</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-top"><span class="pe">🖥️</span><span class="pb azure">Azure</span></div>
+        <h3>Azure VM Deployment</h3>
+        <p>Managed Azure Virtual Machines using PowerShell automation with VNet configuration, NSG rules, and full resource group lifecycle management.</p>
+        <div class="ptags"><span>Azure</span><span>PowerShell</span><span>VNet</span><span>NSG</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-top"><span class="pe">🐳</span><span class="pb docker">Docker</span></div>
+        <h3>Docker Container Project</h3>
+        <p>Containerized applications using custom Dockerfiles and Docker Compose for multi-container orchestration and portable scalable deployments.</p>
+        <div class="ptags"><span>Docker</span><span>Compose</span><span>Containers</span><span>DevOps</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-top"><span class="pe">🌐</span><span class="pb gh">GitHub</span></div>
+        <h3>GitHub Portfolio Hosting</h3>
+        <p>Designed and deployed a live cloud portfolio on GitHub Pages with version control, CI/CD pipeline integration and performance optimization.</p>
+        <div class="ptags"><span>GitHub Pages</span><span>CI/CD</span><span>HTML/CSS</span><span>JS</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!--  CERTIFICATIONS                           -->
+<!-- ══════════════════════════════════════════ -->
+<section class="certs fade-in" id="certs">
+  <div class="sec-inner">
+    <div class="sl">// 04. certifications</div>
+    <h2 class="st">Credentials</h2>
+    <div class="cert-list">
+
+      <div class="cc in-prog">
+        <div class="cc-shine"></div>
+        <div class="cc-left">
+          <div class="cc-ico">☁️</div>
+          <div class="cc-info">
+            <div class="cc-issuer">Amazon Web Services</div>
+            <h4>AWS Cloud Practitioner</h4>
+          </div>
+        </div>
+        <div class="cc-right">
+          <div class="cc-code">CLF-C02</div>
+          <div class="cc-badge prog">⏳ In Progress</div>
+        </div>
+      </div>
+
+      <div class="cc done">
+        <div class="cc-shine"></div>
+        <div class="cc-left">
+          <div class="cc-ico">🔷</div>
+          <div class="cc-info">
+            <div class="cc-issuer">Microsoft Azure</div>
+            <h4>Azure Fundamentals</h4>
+          </div>
+        </div>
+        <div class="cc-right">
+          <div class="cc-code">AZ-900</div>
+          <div class="cc-badge comp">✅ Completed</div>
+        </div>
+      </div>
+
+      <div class="cc done">
+        <div class="cc-shine"></div>
+        <div class="cc-left">
+          <div class="cc-ico">⚡</div>
+          <div class="cc-info">
+            <div class="cc-issuer">Cloud Labs</div>
+            <h4>Cloud Infrastructure Practice</h4>
+          </div>
+        </div>
+        <div class="cc-right">
+          <div class="cc-code">LAB</div>
+          <div class="cc-badge comp">✅ Completed</div>
+        </div>
+      </div>
+
+      <div class="cc done">
+        <div class="cc-shine"></div>
+        <div class="cc-left">
+          <div class="cc-ico">🌐</div>
+          <div class="cc-info">
+            <div class="cc-issuer">Cisco Networking Academy</div>
+            <h4>CCNA v7 Switching &amp; Routing</h4>
+          </div>
+        </div>
+        <div class="cc-right">
+          <div class="cc-code">CCNA</div>
+          <div class="cc-badge comp">✅ Completed</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!--  TIMELINE — BG: Server hallway (blue lit) -->
+<!-- ══════════════════════════════════════════ -->
+<section class="timeline-sec sec-bg-4 fade-in" id="timeline">
+  <div class="sec-inner">
+    <div class="sl">// 05. journey</div>
+    <h2 class="st">My Cloud Journey</h2>
+    <div class="tl">
+      <div class="tl-item tl-l">
+        <div class="tl-dot"><span>01</span></div>
+        <div class="tl-card">
+          <div class="tl-yr">2022</div>
+          <h4>🌐 Networking Foundations</h4>
+          <p>Mastered CCNA — Routing, Switching, VLANs, Subnetting and TCP/IP with Cisco Networking Academy.</p>
+          <div class="tl-tags"><span>CCNA</span><span>Cisco</span><span>TCP/IP</span></div>
+        </div>
+      </div>
+      <div class="tl-item tl-r">
+        <div class="tl-dot"><span>02</span></div>
+        <div class="tl-card">
+          <div class="tl-yr">2023</div>
+          <h4>🐧 Linux & Virtualization</h4>
+          <p>Deep-dived into Linux system admin, Bash scripting, VM management and virtualization technologies.</p>
+          <div class="tl-tags"><span>Linux</span><span>Bash</span><span>VMs</span></div>
+        </div>
+      </div>
+      <div class="tl-item tl-l">
+        <div class="tl-dot"><span>03</span></div>
+        <div class="tl-card">
+          <div class="tl-yr">2024</div>
+          <h4>☁️ Cloud Journey Begins</h4>
+          <p>Launched into AWS & Azure — deployed EC2 servers, Azure VMs, Docker containers and earned first cloud credentials.</p>
+          <div class="tl-tags"><span>AWS</span><span>Azure</span><span>Docker</span></div>
+        </div>
+      </div>
+      <div class="tl-item tl-r tl-now">
+        <div class="tl-dot dot-active"><span>04</span></div>
+        <div class="tl-card card-now">
+          <div class="tl-yr yr-now">2025 — Present 🔥</div>
+          <h4>🚀 Certifying & Building</h4>
+          <p>Completed Azure Fundamentals (AZ-900), actively pursuing AWS Cloud Practitioner and building enterprise-grade cloud projects.</p>
+          <div class="tl-tags"><span>AZ-900 ✅</span><span>AWS CLF</span><span>Portfolio</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!--  CONTACT                                  -->
+<!-- ══════════════════════════════════════════ -->
+<section class="contact fade-in" id="contact">
+  <div class="sec-inner">
+    <div class="sl">// 06. contact</div>
+    <h2 class="st">Let's Build Together</h2>
+    <div class="contact-wrap">
+      <div class="c-left">
+        <p class="c-intro">Open to cloud engineering roles, freelance infrastructure projects & exciting collaborations. If your problem lives in the cloud — I'll solve it. 🚀</p>
+        <a href="https://wa.me/923000357825" target="_blank" class="c-link wa">
+          <span class="cli">💬</span><div><strong>WhatsApp</strong><small>+92 300 0357825</small></div><span class="clr">↗</span>
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=salmanhaider087@gmail.com" target="_blank" class="c-link em">
+          <span class="cli">📧</span><div><strong>Email</strong><small>salmanhaider087@gmail.com</small></div><span class="clr">↗</span>
+        </a>
+        <a href="https://www.linkedin.com/in/salmanhaider-cloud/" target="_blank" class="c-link li">
+          <span class="cli">🔗</span><div><strong>LinkedIn</strong><small>/in/salmanhaider-cloud</small></div><span class="clr">↗</span>
+        </a>
+      </div>
+      <div class="hire-box glass-card">
+        <h3>Hire Me 🚀</h3>
+        <p class="hb-sub">Send your requirements — I'll respond ASAP.</p>
+        <input type="text"  placeholder="Your Name / Company" />
+        <input type="email" placeholder="Email Address" />
+        <select>
+          <option value="" disabled selected>Select Project Type</option>
+          <option>Cloud Infrastructure Setup</option>
+          <option>AWS Deployment</option>
+          <option>Azure Configuration</option>
+          <option>Docker / Containerization</option>
+          <option>Linux Server Administration</option>
+          <option>Network Configuration</option>
+          <option>Other</option>
+        </select>
+        <textarea placeholder="Describe your project in detail..."></textarea>
+        <button class="send-btn">Send Message 🚀</button>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-brand">☁ Salman Haider</div>
+  <div class="ft-inner">
+    <div class="ft-logo">☁ Salman<span>.</span>dev</div>
     <p>Cloud Engineer · Pakistan 🇵🇰</p>
-    <p class="footer-copy">© 2026 Salman Haider. Built with passion & coffee ☕</p>
+    <div class="ft-links">
+      <a href="https://wa.me/923000357825" target="_blank">WhatsApp</a>
+      <a href="https://www.linkedin.com/in/salmanhaider-cloud/" target="_blank">LinkedIn</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=salmanhaider087@gmail.com" target="_blank">Email</a>
+    </div>
+    <p class="ft-copy">© 2026 Salman Haider · Crafted with ☁️ passion &amp; ☕ coffee</p>
   </div>
 </footer>
 
 <!-- Floating WhatsApp -->
-<a href="https://wa.me/923000357825" target="_blank" class="whatsapp-float">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-  <span class="whatsapp-tooltip">Chat with me!</span>
+<a href="https://wa.me/923000357825" target="_blank" class="wa-btn">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+  <span class="wa-tip">Chat with me!</span>
 </a>
 
 <!-- Back to Top -->
-<button id="back-to-top" aria-label="Back to top">↑</button>
+<button id="btt" aria-label="Back to top">↑</button>
 
 <script src="script.js"></script>
 </body>
