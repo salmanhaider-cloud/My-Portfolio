@@ -90,7 +90,7 @@ resize(); drawPts();
 const typed = document.getElementById('typed');
 const phrases = [
   'Cloud Engineer', 'AWS Practitioner', 'Linux Administrator',
-  'Docker Enthusiast', 'Infrastructure Builder', 'Azure Fundamentals ✅'
+  'Docker Enthusiast', 'Infrastructure Builder', 'Azure Fundamentals'
 ];
 let pi = 0, ci = 0, del = false;
 function type() {
