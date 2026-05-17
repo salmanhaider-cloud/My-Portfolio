@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Salman Haider | Cloud Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div id="scroll-progress"></div>
+
+<!-- Particle Canvas -->
+<canvas id="canvas"></canvas>
+
+<!-- Cursor -->
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+
+<!-- SKELETON -->
+<div id="skeleton">
+  <div class="sk-nav">
+    <div class="skb sk-logo"></div>
+    <div class="sk-nl"><div class="skb skl"></div><div class="skb skl"></div><div class="skb skl"></div><div class="skb skl"></div></div>
+  </div>
+  <div class="sk-hero">
+    <div class="skb skhs"></div>
+    <div class="skb skht"></div>
+    <div class="skb skhp"></div>
+    <div class="skb skhp s2"></div>
+  </div>
+</div>
+
+<!-- SPLASH -->
+<div id="splash">
+  <div class="sp-wrap">
+    <div class="sp-rings">
+      <span class="spr r1"></span><span class="spr r2"></span>
+      <span class="spr r3"></span><span class="spr r4"></span>
+    </div>
+    <div class="sp-inner">
+      <div class="sp-cloud">☁️</div>
+      <h1 class="sp-name">Salman Haider</h1>
+      <p class="sp-role">Cloud Engineer</p>
+      <div class="sp-bar"><div class="sp-fill"></div></div>
+      <p class="sp-tag">// booting cloud portfolio v4.0...</p>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="#home" class="brand">
+    <span class="bc">☁</span>
+    <span class="bt">Salman<em>.</em>dev</span>
+  </a>
+  <div class="hbg" id="hbg"><span></span><span></span><span></span></div>
+  <div class="navlinks" id="navlinks">
+    <a href="#about"    class="nl">About</a>
+    <a href="#skills"   class="nl">Skills</a>
+    <a href="#projects" class="nl">Projects</a>
+    <a href="#certs"    class="nl">Certs</a>
+    <a href="#timeline" class="nl">Journey</a>
+    <a href="#contact"  class="nl">Contact</a>
+    <a href="Salman Haider CV.pdf" download class="nl-cv">Download CV ↓</a>
+  </div>
+</nav>
+<div class="mob-bg" id="mob-bg"></div>
+
+<!-- ══════════════════════════════
+  HERO  — bg: Neon fiber optic burst
+══════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-left fade">
+    <div class="badge"><span class="bdot"></span>Available for Cloud Roles</div>
+    <p class="salut">Hello World, I'm</p>
+    <h1 class="hname">
+      <span class="hw">Salman</span>
+      <span class="hc">Haider</span>
+    </h1>
+    <div class="typed-wrap">
+      <span class="tb">&lt;</span><span id="typed"></span><span class="tb"> /&gt;</span>
+    </div>
+    <p class="hdesc">Architecting cloud infrastructure · Taming Linux servers<br>Shipping containers across the digital sky ☁️</p>
+    <div class="hbtns">
+      <a href="#projects" class="btn-p">View My Work →</a>
+      <a href="https://www.linkedin.com/in/salmanhaider-cloud/" target="_blank" class="btn-o">LinkedIn ↗</a>
+    </div>
+    <div class="scroll-hint"><div class="smouse"><div class="swheel"></div></div><span>scroll to explore</span></div>
+  </div>
+  <div class="hero-right fade">
+    <div class="orbit-wrap">
+      <div class="orb-glow"></div>
+      <div class="orb-core"><span class="oe">☁️</span><span class="ol">Cloud</span></div>
+      <div class="orb o1"><div class="on"><span>⚡</span><small>AWS</small></div></div>
+      <div class="orb o2">
+        <div class="on"><span>🐳</span><small>Docker</small></div>
+        <div class="on"><span>🔧</span><small>Shell</small></div>
+      </div>
+      <div class="orb o3">
+        <div class="on"><span>🐧</span><small>Linux</small></div>
+        <div class="on"><span>🌐</span><small>Net</small></div>
+        <div class="on"><span>🔐</span><small>Sec</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats fade">
+  <div class="sc"><div class="si">🚀</div><div class="sn" data-t="4" data-s="+">0</div><div class="sl2">Cloud Projects</div></div>
+  <div class="sc"><div class="si">🏆</div><div class="sn" data-t="4" data-s="+">0</div><div class="sl2">Certifications</div></div>
+  <div class="sc"><div class="si">⚙️</div><div class="sn" data-t="9" data-s="+">0</div><div class="sl2">Tech Skills</div></div>
+  <div class="sc"><div class="si">💯</div><div class="sn" data-t="100" data-s="%">0</div><div class="sl2">Dedication</div></div>
+</div>
+
+<!-- ══════════════════════════════
+  ABOUT — bg: Dark server corridor with blue light
+══════════════════════════════ -->
+<section class="sec about-sec" id="about">
+  <div class="sec-inner">
+    <p class="slabel">// 01. about_me</p>
+    <h2 class="stitle">Who Am I?</h2>
+    <div class="about-grid">
+      <div class="terminal fade">
+        <div class="term-top">
+          <span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span>
+          <span class="ttl">salman@cloud:~$</span>
+        </div>
+        <div class="term-body">
+          <p class="trow"><span class="tc2">~$</span> <span class="tk">whoami</span></p>
+          <p class="tout">Passionate Cloud Engineer — AWS · Azure · Linux · Docker · Networking</p>
+          <p class="trow mt"><span class="tc2">~$</span> <span class="tk">cat mission.txt</span></p>
+          <p class="tout">Building real-world cloud infrastructure to solve enterprise problems. Every deployment is one step closer to becoming a world-class Cloud Engineer.</p>
+          <p class="trow mt"><span class="tc2">~$</span> <span class="tk">echo $STATUS</span></p>
+          <p class="tout green">Open to Work · Pakistan 🇵🇰</p>
+          <span class="tcur">█</span>
+        </div>
+      </div>
+      <div class="hlights fade">
+        <div class="hl"><div class="hli">☁️</div><div><strong>Cloud-First Mindset</strong><p>Scalable, reliable, cloud-native — always.</p></div></div>
+        <div class="hl"><div class="hli">🚀</div><div><strong>Always Leveling Up</strong><p>Chasing certs & best practices every day.</p></div></div>
+        <div class="hl"><div class="hli">🔧</div><div><strong>Infrastructure Nerd</strong><p>I make sure systems just work, always.</p></div></div>
+        <div class="hl"><div class="hli">🌐</div><div><strong>Network Enthusiast</strong><p>Deep CCNA: routing, switching & TCP/IP.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+  SKILLS
+══════════════════════════════ -->
+<section class="sec skills-sec" id="skills">
+  <div class="sec-inner">
+    <p class="slabel">// 02. skills</p>
+    <h2 class="stitle">Tech Arsenal</h2>
+    <div class="skills-wrap">
+      <div class="sbars fade">
+        <div class="sb"><div class="sbh"><span>🐧 Linux Administration</span><span class="sp2">80%</span></div><div class="sbt"><div class="sbf" data-w="80"></div></div></div>
+        <div class="sb"><div class="sbh"><span>☁️ AWS</span><span class="sp2">75%</span></div><div class="sbt"><div class="sbf" data-w="75"></div></div></div>
+        <div class="sb"><div class="sbh"><span>🌐 Networking (CCNA)</span><span class="sp2">78%</span></div><div class="sbt"><div class="sbf" data-w="78"></div></div></div>
+        <div class="sb"><div class="sbh"><span>☁️ Azure</span><span class="sp2">72%</span></div><div class="sbt"><div class="sbf" data-w="72"></div></div></div>
+        <div class="sb"><div class="sbh"><span>🐳 Docker</span><span class="sp2">72%</span></div><div class="sbt"><div class="sbf" data-w="72"></div></div></div>
+        <div class="sb"><div class="sbh"><span>🔧 Shell Scripting</span><span class="sp2">65%</span></div><div class="sbt"><div class="sbf" data-w="65"></div></div></div>
+        <div class="sb"><div class="sbh"><span>🔐 Cloud Security</span><span class="sp2">68%</span></div><div class="sbt"><div class="sbf" data-w="68"></div></div></div>
+        <div class="sb"><div class="sbh"><span>🖥️ Virtualization</span><span class="sp2">73%</span></div><div class="sbt"><div class="sbf" data-w="73"></div></div></div>
+      </div>
+      <div class="tag-box fade">
+        <h4>// tools &amp; tech</h4>
+        <div class="tags">
+          <span>AWS EC2</span><span>AWS S3</span><span>AWS IAM</span>
+          <span>Azure VM</span><span>Azure VNet</span><span>Azure NSG</span>
+          <span>Docker</span><span>Compose</span><span>Linux</span>
+          <span>Bash</span><span>PowerShell</span><span>GitHub</span>
+          <span>GitHub Pages</span><span>Apache</span><span>TCP/IP</span>
+          <span>Subnetting</span><span>Firewalls</span><span>VPN</span>
+          <span>Security Groups</span><span>IAM Policies</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+  PROJECTS — bg: Server cables close-up
+══════════════════════════════ -->
+<section class="sec projects-sec" id="projects">
+  <div class="sec-inner">
+    <p class="slabel">// 03. projects</p>
+    <h2 class="stitle">What I've Built</h2>
+    <div class="pgrid">
+      <div class="pc fade">
+        <div class="pct"><span class="pe2">☁️</span><span class="pb aws">AWS</span></div>
+        <h3>AWS EC2 Apache Deployment</h3>
+        <p>Deployed EC2 instance on AWS, configured Apache web server, managed security groups and inbound/outbound traffic rules for a live production server.</p>
+        <div class="ptags"><span>EC2</span><span>Apache</span><span>Linux</span><span>Security Groups</span></div>
+      </div>
+      <div class="pc fade">
+        <div class="pct"><span class="pe2">🖥️</span><span class="pb azure">Azure</span></div>
+        <h3>Azure VM Deployment</h3>
+        <p>Managed Azure Virtual Machines via PowerShell automation with VNet configuration, NSG rules, and full resource group lifecycle management.</p>
+        <div class="ptags"><span>Azure</span><span>PowerShell</span><span>VNet</span><span>NSG</span></div>
+      </div>
+      <div class="pc fade">
+        <div class="pct"><span class="pe2">🐳</span><span class="pb docker">Docker</span></div>
+        <h3>Docker Container Project</h3>
+        <p>Containerized applications with custom Dockerfiles and Docker Compose for multi-container orchestration and portable scalable deployments.</p>
+        <div class="ptags"><span>Docker</span><span>Compose</span><span>Containers</span><span>DevOps</span></div>
+      </div>
+      <div class="pc fade">
+        <div class="pct"><span class="pe2">🌐</span><span class="pb gh">GitHub</span></div>
+        <h3>GitHub Portfolio Hosting</h3>
+        <p>Deployed live cloud portfolio on GitHub Pages with version control, CI/CD pipeline integration and complete performance optimization.</p>
+        <div class="ptags"><span>GitHub Pages</span><span>CI/CD</span><span>HTML/CSS</span><span>JavaScript</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+  CERTIFICATIONS
+══════════════════════════════ -->
+<section class="sec certs-sec" id="certs">
+  <div class="sec-inner">
+    <p class="slabel">// 04. certifications</p>
+    <h2 class="stitle">Credentials</h2>
+    <div class="clist">
+
+      <div class="cc fade inprog">
+        <div class="cc-bar"></div>
+        <div class="cc-shine"></div>
+        <div class="ccl">
+          <div class="cci">☁️</div>
+          <div><div class="cciss">Amazon Web Services</div><h4>AWS Cloud Practitioner</h4></div>
+        </div>
+        <div class="ccr">
+          <div class="ccode">CLF-C02</div>
+          <div class="cbadge prog">⏳ In Progress</div>
+        </div>
+      </div>
+
+      <div class="cc fade done">
+        <div class="cc-bar"></div>
+        <div class="cc-shine"></div>
+        <div class="ccl">
+          <div class="cci">🔷</div>
+          <div><div class="cciss">Microsoft Azure</div><h4>Azure Fundamentals</h4></div>
+        </div>
+        <div class="ccr">
+          <div class="ccode">AZ-900</div>
+          <div class="cbadge comp">✅ Completed</div>
+        </div>
+      </div>
+
+      <div class="cc fade done">
+        <div class="cc-bar"></div>
+        <div class="cc-shine"></div>
+        <div class="ccl">
+          <div class="cci">⚡</div>
+          <div><div class="cciss">Cloud Labs</div><h4>Cloud Infrastructure Practice</h4></div>
+        </div>
+        <div class="ccr">
+          <div class="ccode">LAB</div>
+          <div class="cbadge comp">✅ Completed</div>
+        </div>
+      </div>
+
+      <div class="cc fade done">
+        <div class="cc-bar"></div>
+        <div class="cc-shine"></div>
+        <div class="ccl">
+          <div class="cci">🌐</div>
+          <div><div class="cciss">Cisco Networking Academy</div><h4>CCNA v7 Switching &amp; Routing</h4></div>
+        </div>
+        <div class="ccr">
+          <div class="ccode">CCNA</div>
+          <div class="cbadge comp">✅ Completed</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+  TIMELINE — bg: Blue-lit server corridor
+══════════════════════════════ -->
+<section class="sec tl-sec" id="timeline">
+  <div class="sec-inner">
+    <p class="slabel">// 05. journey</p>
+    <h2 class="stitle">My Cloud Journey</h2>
+    <div class="tl">
+      <div class="ti tl"><div class="tdot"><span>01</span></div>
+        <div class="tc fade">
+          <div class="tyr">2022</div><h4>🌐 Networking Foundations</h4>
+          <p>Mastered CCNA — Routing, Switching, VLANs, Subnetting and TCP/IP with Cisco Networking Academy.</p>
+          <div class="ttags"><span>CCNA</span><span>Cisco</span><span>TCP/IP</span></div>
+        </div>
+      </div>
+      <div class="ti tr"><div class="tdot"><span>02</span></div>
+        <div class="tc fade">
+          <div class="tyr">2023</div><h4>🐧 Linux &amp; Virtualization</h4>
+          <p>Deep-dived into Linux system admin, Bash scripting, VM management and virtualization technologies.</p>
+          <div class="ttags"><span>Linux</span><span>Bash</span><span>VMs</span></div>
+        </div>
+      </div>
+      <div class="ti tl"><div class="tdot"><span>03</span></div>
+        <div class="tc fade">
+          <div class="tyr">2024</div><h4>☁️ Cloud Journey Begins</h4>
+          <p>Launched into AWS &amp; Azure — EC2 servers, Azure VMs, Docker containers and earned first cloud credentials.</p>
+          <div class="ttags"><span>AWS</span><span>Azure</span><span>Docker</span></div>
+        </div>
+      </div>
+      <div class="ti tr active-row"><div class="tdot tdot-on"><span>04</span></div>
+        <div class="tc tc-on fade">
+          <div class="tyr tyr-on">2025 — Present 🔥</div><h4>🚀 Certifying &amp; Building</h4>
+          <p>Completed Azure Fundamentals (AZ-900), actively pursuing AWS Cloud Practitioner and building enterprise-grade cloud projects.</p>
+          <div class="ttags"><span>AZ-900 ✅</span><span>AWS CLF</span><span>Portfolio</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+  CONTACT
+══════════════════════════════ -->
+<section class="sec contact-sec" id="contact">
+  <div class="sec-inner">
+    <p class="slabel">// 06. contact</p>
+    <h2 class="stitle">Let's Build Together</h2>
+    <div class="cwrap">
+      <div class="cleft fade">
+        <p class="cintro">Open to cloud engineering roles, freelance infrastructure projects &amp; exciting collaborations. If your problem lives in the cloud — I'll solve it. 🚀</p>
+        <a href="https://wa.me/923000357825" target="_blank" class="clink wa">
+          <span class="cli2">💬</span><div><strong>WhatsApp</strong><small>+92 300 0357825</small></div><span class="carr">↗</span>
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=salmanhaider087@gmail.com" target="_blank" class="clink em">
+          <span class="cli2">📧</span><div><strong>Email</strong><small>salmanhaider087@gmail.com</small></div><span class="carr">↗</span>
+        </a>
+        <a href="https://www.linkedin.com/in/salmanhaider-cloud/" target="_blank" class="clink li">
+          <span class="cli2">🔗</span><div><strong>LinkedIn</strong><small>/in/salmanhaider-cloud</small></div><span class="carr">↗</span>
+        </a>
+      </div>
+      <div class="hire-card fade">
+        <h3>Hire Me 🚀</h3>
+        <p class="hcsub">Send requirements — I'll respond ASAP.</p>
+        <input type="text"  placeholder="Your Name / Company"/>
+        <input type="email" placeholder="Email Address"/>
+        <select>
+          <option value="" disabled selected>Select Project Type</option>
+          <option>Cloud Infrastructure Setup</option>
+          <option>AWS Deployment</option>
+          <option>Azure Configuration</option>
+          <option>Docker / Containerization</option>
+          <option>Linux Server Administration</option>
+          <option>Network Configuration</option>
+          <option>Other</option>
+        </select>
+        <textarea placeholder="Describe your project in detail..."></textarea>
+        <button class="sbtn">Send Message 🚀</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft">
+    <div class="ftlogo">☁ Salman<em>.</em>dev</div>
+    <p>Cloud Engineer · Pakistan 🇵🇰</p>
+    <div class="ftlinks">
+      <a href="https://wa.me/923000357825" target="_blank">WhatsApp</a>
+      <a href="https://www.linkedin.com/in/salmanhaider-cloud/" target="_blank">LinkedIn</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=salmanhaider087@gmail.com" target="_blank">Email</a>
+    </div>
+    <p class="ftcopy">© 2026 Salman Haider · Built with ☁️ passion &amp; ☕ coffee</p>
+  </div>
+</footer>
+
+<!-- Floating WA -->
+<a href="https://wa.me/923000357825" target="_blank" class="wa-float">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WA"/>
+  <span class="watip">Chat with me!</span>
+</a>
+
+<!-- Back to Top -->
+<button id="btt">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
